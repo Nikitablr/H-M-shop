@@ -11,3 +11,5 @@ def browser():
     driver.implicitly_wait(10)
     yield driver
     time.sleep(20)
+    driver.quit()
+    driver.quit()
