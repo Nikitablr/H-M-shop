@@ -2,7 +2,7 @@ from pages.header_main_page import HeaderMainPage
 from pages.base_page import BasePage
 from pages.main_page import MainPage
 
-def test_jump_to_pages(browser):
+def test_jump_to_pages_in_header(browser):
     page = BasePage(browser)
     page.go_to_site()
     page = HeaderMainPage(browser)
