@@ -1,5 +1,6 @@
 from pages.header_main_page import HeaderMainPage
 from pages.base_page import BasePage
+from pages.main_page import MainPage
 
 def test_jump_to_pages(browser):
     page = BasePage(browser)
@@ -14,3 +15,20 @@ def test_jump_to_pages(browser):
     page.open_sport_page()
     page.open_sale_page()
     page.open_sustainability_page()
+
+def test_jump_to_paris_trend_report_page(browser):
+    page = BasePage(browser)
+    page.go_to_site()
+    page = MainPage(browser)
+    page.open_paris_trend_report_page()
+
+def test_jump_to_turn_up_the_color_page(browser):
+    page = BasePage(browser)
+    page.go_to_site()
+    page = MainPage(browser)
+    page.open_turn_up_the_color_page()
+
+
+
+
+
