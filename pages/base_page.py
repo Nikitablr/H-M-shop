@@ -21,14 +21,15 @@ class BasePage:
         actions = ActionChains(self.browser)
         actions.move_to_element(element).perform()
 
-    def click(self, locator, wait_time=20):
-        element = self.browser.find_element(locator, wait_time)
+    def click(self, *locator):
+        element = self.browser.find_element(*locator)
         element.click()
 
     def fill(self, value, locator, wait_time=60):
         element = self.browser.find_element(locator, wait_time)
         if value:
             element.send_keys(value)
+
 
     def is_presented(self, *how):
         element = self.browser.find_element(*how)
@@ -48,6 +49,11 @@ class BasePage:
             return False
 
         return True
+
+    def switch_to_new_window(self, num_win):
+        self.browser.switch_to.window(self.browser.window_handles[int(num_win)])
+
+
 
 
 
