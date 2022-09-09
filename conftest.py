@@ -8,7 +8,7 @@ import time
 @pytest.fixture(scope="function")
 def browser():
     driver = webdriver.Chrome(ChromeDriverManager().install())
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(5)
     yield driver
     time.sleep(20)
     driver.quit()
