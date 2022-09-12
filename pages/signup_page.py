@@ -12,7 +12,7 @@ class SignupPage(BasePage):
         self.click(*SigninLocators.SIGNIN_PAGE_BUTTON)
         self.wait_to_be_clickable(SignupLocators.BECOME_A_MEMBER_BUTTON)
 
-
+    #Заполняем поля валидными данными для регистрации
     def fill_fields_for_signup(self):
         data = SignupData.random()
         self.fill(data.email, *SignupLocators.EMAIL_FIELD)
