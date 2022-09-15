@@ -5,3 +5,4 @@
 !/locators/__init__.py
 !/main.py
 
+!/%allure_result_folder%/
