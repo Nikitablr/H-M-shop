@@ -18,6 +18,9 @@ class MainPagelocators:
     VIEW_ALL_BUTTON = (By.XPATH, '//*[@id="menu-links"]/li[1]/ul/li[1]/a')
     MAXIMUM = (By.XPATH, '//*[@id="page-content"]/div/div[3]/div[2]/h2')
     LOAD_MORE_PRODUCTS_BUTTON = (By.XPATH, '//*[@id="page-content"]/div/div[3]/div[2]/button')
+    ACCEPT_ALL_COOKIES_BUTTON = (By.XPATH, '//*[@id="onetrust-accept-btn-handler"]')
+
+
 class SocialNetworkLocators:
     FACEBOOK_PAGE_BUTTON = (By.XPATH, '/html/body/footer/div/ul/li[1]/a')
     TWITTER_PAGE_BUTTON = (By.XPATH, '/html/body/footer/div/ul/li[2]/a')

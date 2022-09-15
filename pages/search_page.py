@@ -1,13 +1,13 @@
-from locators.signin_locators import SigninLocators
 from pages.base_page import BasePage
 from locators.locators_search import SearchLocators
 from models.search_faker import SearchData
+from locators.locators_main_page import MainPagelocators
 
 
 class SearchPage(BasePage):
 
     def open_search_page(self):
-        self.click(*SigninLocators.ACCEPT_ALL_COOKIES_BUTTON)
+        self.click(*MainPagelocators.ACCEPT_ALL_COOKIES_BUTTON)
         search_button = self.browser.find_element(*SearchLocators.SEARCH_FIELD)
         search_button.click()
 

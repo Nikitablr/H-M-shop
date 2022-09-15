@@ -28,6 +28,11 @@ class MainPage(BasePage):
     def open_random_product(self):
         RandomSelect.select_maximum(self)
 
+    def open_view_all_on_men_page(self):
+        self.click(*MainPagelocators.MEN_BUTTON)
+        self.click(*MainPagelocators.VIEW_ALL_BUTTON)
+
+
 
 
 

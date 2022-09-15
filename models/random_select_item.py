@@ -10,6 +10,7 @@ class RandomSelect():
 
     def __init__(self, browser):
         self.browser = browser
+
     def select_maximum(self):
         while True:
             try:

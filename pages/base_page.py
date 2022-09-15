@@ -2,7 +2,8 @@ from selenium.common import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from locators.signin_locators import SigninLocators
+from  locators.locators_main_page import MainPagelocators
+
 
 
 class BasePage:
@@ -13,7 +14,7 @@ class BasePage:
 
     def go_to_site(self):
         self.browser.get(self.base_url)
-        cookies = self.browser.find_element(*SigninLocators.ACCEPT_ALL_COOKIES_BUTTON)
+        cookies = self.browser.find_element(*MainPagelocators.ACCEPT_ALL_COOKIES_BUTTON)
         cookies.click()
 
     def scroll_to_element(self, *how):
