@@ -22,8 +22,8 @@ class BasePage:
         actions.move_to_element(element).perform()
 
     def click(self, *locator):
-        element = self.browser.find_element(*locator)
-        element.click()
+        button = WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable(locator))
+        button.click()
 
     def fill(self, value, locator, wait_time=60):
         element = self.browser.find_element(locator, wait_time)

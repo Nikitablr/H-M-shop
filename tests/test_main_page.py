@@ -28,12 +28,7 @@ def test_go_to_turn_up_the_color_page(browser):
     page = MainPage(browser)
     page.open_turn_up_the_color_page()
 
-def test_add_random_product_to_cart(browser):
-    page = BasePage(browser)
-    page.go_to_site()
-    page = MainPage(browser)
-    page.open_view_all_page()
-    page.open_random_product()
+
 
 
 
